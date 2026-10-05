@@ -1,0 +1,1311 @@
+<!DOCTYPE html><html class="scroll-smooth dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nihal Ayoob — Precision UI/UX Designer</title>
+<!-- Google Fonts: Plus Jakarta Sans & Poppins -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS v3 with Plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        "colors": {
+          "border-subtle": "rgba(255, 255, 255, 0.08)",
+          "border-strong": "rgba(255, 255, 255, 0.16)",
+          "text-muted": "#94A3B8",
+          "status-emerald": "#10b981"
+        },
+        "fontFamily": {
+          "sans": ["Poppins", "Plus Jakarta Sans", "sans-serif"],
+          "display-hero-mobile": ["Plus Jakarta Sans", "sans-serif"],
+          "label-md": ["Plus Jakarta Sans", "sans-serif"],
+          "display-hero": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-md": ["Plus Jakarta Sans", "sans-serif"],
+          "body-md": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-sm": ["Plus Jakarta Sans", "sans-serif"],
+          "label-sm": ["Plus Jakarta Sans", "sans-serif"],
+          "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+          "headline-lg-mobile": ["Plus Jakarta Sans", "sans-serif"]
+        },
+        "fontSize": {
+          "display-hero-mobile": [
+            "38px",
+            {
+              "lineHeight": "46px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "label-md": [
+            "13px",
+            {
+              "lineHeight": "18px",
+              "letterSpacing": "0.02em",
+              "fontWeight": "600"
+            }
+          ],
+          "display-hero": [
+            "60px",
+            {
+              "lineHeight": "68px",
+              "letterSpacing": "-0.03em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-lg": [
+            "36px",
+            {
+              "lineHeight": "44px",
+              "letterSpacing": "-0.025em",
+              "fontWeight": "700"
+            }
+          ],
+          "headline-md": [
+            "24px",
+            {
+              "lineHeight": "32px",
+              "letterSpacing": "-0.015em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-md": [
+            "15px",
+            {
+              "lineHeight": "24px",
+              "letterSpacing": "0em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-sm": [
+            "20px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.01em",
+              "fontWeight": "600"
+            }
+          ],
+          "label-sm": [
+            "11px",
+            {
+              "lineHeight": "16px",
+              "letterSpacing": "0.04em",
+              "fontWeight": "600"
+            }
+          ],
+          "body-lg": [
+            "18px",
+            {
+              "lineHeight": "28px",
+              "letterSpacing": "-0.005em",
+              "fontWeight": "400"
+            }
+          ],
+          "headline-lg-mobile": [
+            "28px",
+            {
+              "lineHeight": "36px",
+              "letterSpacing": "-0.02em",
+              "fontWeight": "700"
+            }
+          ]
+        }
+      },
+    },
+  }
+</script>
+<style>
+    body {
+      font-family: 'Poppins', 'Plus Jakarta Sans', sans-serif;
+    }
+
+    /* Dynamic Luxury Moving Animated Gradient Canvas */
+    .animated-canvas-bg {
+      background: radial-gradient(circle at 50% 0%, #171922 0%, #0c0d12 40%, #050507 100%),
+                  linear-gradient(130deg, #090a0f 0%, #151822 30%, #0e1017 60%, #1f232f 85%, #08090d 100%);
+      background-size: 260% 260%;
+      animation: meshGradientFlow 20s ease-in-out infinite alternate;
+    }
+
+    @keyframes meshGradientFlow {
+      0% {
+        background-position: 0% 15%;
+      }
+      50% {
+        background-position: 100% 85%;
+      }
+      100% {
+        background-position: 35% 0%;
+      }
+    }
+
+    /* Ambient Floating Mesh Orbs */
+    .ambient-orb {
+      position: absolute;
+      border-radius: 9999px;
+      filter: blur(130px);
+      pointer-events: none;
+      mix-blend-mode: screen;
+      will-change: transform, opacity;
+    }
+
+    .orb-1 {
+      top: -120px;
+      left: 15%;
+      width: 620px;
+      height: 620px;
+      background: radial-gradient(circle, rgba(226, 232, 240, 0.16) 0%, rgba(148, 163, 184, 0.08) 45%, rgba(0, 0, 0, 0) 70%);
+      animation: floatOrbOne 22s ease-in-out infinite alternate;
+    }
+
+    .orb-2 {
+      top: 280px;
+      right: -80px;
+      width: 580px;
+      height: 580px;
+      background: radial-gradient(circle, rgba(160, 174, 192, 0.15) 0%, rgba(75, 85, 99, 0.12) 50%, rgba(0, 0, 0, 0) 75%);
+      animation: floatOrbTwo 26s ease-in-out infinite alternate;
+    }
+
+    .orb-3 {
+      top: 950px;
+      left: 5%;
+      width: 650px;
+      height: 650px;
+      background: radial-gradient(circle, rgba(248, 250, 252, 0.12) 0%, rgba(55, 65, 81, 0.15) 50%, rgba(0, 0, 0, 0) 70%);
+      animation: floatOrbThree 28s ease-in-out infinite alternate;
+    }
+
+    .orb-4 {
+      bottom: 200px;
+      right: 18%;
+      width: 680px;
+      height: 680px;
+      background: radial-gradient(circle, rgba(203, 213, 225, 0.14) 0%, rgba(71, 85, 105, 0.12) 48%, rgba(0, 0, 0, 0) 75%);
+      animation: floatOrbFour 24s ease-in-out infinite alternate;
+    }
+
+    @keyframes floatOrbOne {
+      0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.7; }
+      50% { transform: translate3d(80px, 90px, 0) scale(1.12); opacity: 0.95; }
+      100% { transform: translate3d(-60px, 140px, 0) scale(0.92); opacity: 0.65; }
+    }
+
+    @keyframes floatOrbTwo {
+      0% { transform: translate3d(0, 0, 0) scale(0.95); opacity: 0.6; }
+      50% { transform: translate3d(-110px, 120px, 0) scale(1.15); opacity: 0.85; }
+      100% { transform: translate3d(-40px, -60px, 0) scale(1.02); opacity: 0.55; }
+    }
+
+    @keyframes floatOrbThree {
+      0% { transform: translate3d(0, 0, 0) scale(1.05); opacity: 0.65; }
+      50% { transform: translate3d(120px, -80px, 0) scale(0.9); opacity: 0.85; }
+      100% { transform: translate3d(60px, 70px, 0) scale(1.14); opacity: 0.7; }
+    }
+
+    @keyframes floatOrbFour {
+      0% { transform: translate3d(0, 0, 0) scale(1); opacity: 0.6; }
+      50% { transform: translate3d(-90px, -110px, 0) scale(1.12); opacity: 0.9; }
+      100% { transform: translate3d(70px, -50px, 0) scale(0.94); opacity: 0.65; }
+    }
+
+    /* Metallic Silver Shimmer Gradient Text */
+    .chrome-gradient-text {
+      background: linear-gradient(135deg, #FFFFFF 0%, #F1F5F9 22%, #94A3B8 52%, #E2E8F0 78%, #64748B 100%);
+      background-size: 240% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: metallicShine 9s ease infinite;
+    }
+
+    @keyframes metallicShine {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* Card Shadows and Glass Surface Enhancements */
+    .custom-card-shadow {
+      box-shadow: 0 16px 40px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.1);
+    }
+    .custom-card-hover {
+      transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .custom-card-hover:hover {
+      box-shadow: 0 24px 50px -12px rgba(0, 0, 0, 0.85), 0 0 30px 1px rgba(255, 255, 255, 0.12), inset 0 1px 1px rgba(255, 255, 255, 0.22);
+      transform: translateY(-5px);
+      border-color: rgba(255, 255, 255, 0.28);
+    }
+    .tech-logo-container {
+      transition: transform 0.25s ease;
+    }
+    .tech-card:hover .tech-logo-container {
+      transform: scale(1.08);
+    }
+    .dark-slate-btn {
+      background: linear-gradient(135deg, #242833 0%, #12141a 100%);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+    }
+    .dark-slate-btn:hover {
+      background: linear-gradient(135deg, #2e3442 0%, #181b22 100%);
+      border-color: rgba(255, 255, 255, 0.36);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7), inset 0 1px 0 rgba(255, 255, 255, 0.28);
+    }
+    .dark-pill {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    }
+    .glass-surface {
+      background: linear-gradient(180deg, rgba(25, 28, 36, 0.78) 0%, rgba(14, 16, 21, 0.86) 100%);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.11);
+    }
+    .glass-surface-elevated {
+      background: linear-gradient(180deg, rgba(32, 36, 46, 0.82) 0%, rgba(16, 18, 24, 0.92) 100%);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255, 255, 255, 0.16);
+    }
+
+    /* Respect Reduced Motion */
+    @media (prefers-reduced-motion: reduce) {
+      .animated-canvas-bg {
+        animation: none !important;
+        background-position: 50% 50% !important;
+      }
+      .ambient-orb {
+        animation: none !important;
+        transform: none !important;
+      }
+      .chrome-gradient-text {
+        animation: none !important;
+      }
+      .custom-card-hover {
+        transition: none !important;
+      }
+    }
+</style>
+</head>
+<body class="animated-canvas-bg text-[#F8FAFC] antialiased selection:bg-zinc-700 selection:text-white min-h-screen flex flex-col justify-between relative overflow-x-hidden">
+<!-- Fluid Ambient Floating Mesh Orbs (Silver, White, Charcoal Glows) -->
+<div aria-hidden="true" class="fixed inset-0 pointer-events-none -z-10 overflow-hidden">
+<div class="ambient-orb orb-1"></div>
+<div class="ambient-orb orb-2"></div>
+<div class="ambient-orb orb-3"></div>
+<div class="ambient-orb orb-4"></div>
+<!-- Subtle overlay vignette for depth -->
+<div class="absolute inset-0 bg-gradient-to-b from-transparent via-black/15 to-[#050507]/60 pointer-events-none"></div>
+</div>
+<!-- TopNavBar (Shared Component) -->
+<header class="fixed top-0 left-0 w-full z-50 bg-[#14161c]/80 backdrop-blur-2xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-6 md:px-12 py-4">
+<!-- Logo Anchor -->
+<a class="font-headline-md text-headline-md tracking-tighter font-extrabold text-[#F8FAFC] hover:text-white transition-colors flex items-center gap-1.5" href="#">
+<span class="w-2.5 h-2.5 rounded-full bg-gradient-to-tr from-white to-zinc-400 shadow-[0_0_12px_rgba(255,255,255,0.7)]"></span>
+<span class="tracking-tight">NA.</span>
+</a>
+<!-- Desktop Nav Links -->
+<nav class="hidden md:flex items-center space-x-8">
+<a class="nav-smooth-link text-[#F8FAFC] font-semibold border-b-2 border-white pb-1 transition-colors duration-200" href="#projects">Work</a>
+<a class="nav-smooth-link text-[#94A3B8] font-medium hover:text-[#F8FAFC] transition-colors duration-200" href="#expertise">Expertise</a>
+<a class="nav-smooth-link text-[#94A3B8] font-medium hover:text-[#F8FAFC] transition-colors duration-200" href="#experience">Experience</a>
+<a class="nav-smooth-link text-[#94A3B8] font-medium hover:text-[#F8FAFC] transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+<!-- Trailing Actions -->
+<div class="hidden md:flex items-center space-x-3">
+<button class="open-resume-btn px-4 py-2 rounded-full border border-white/15 bg-zinc-900/80 text-[#E2E8F0] font-label-md text-label-md hover:bg-zinc-800 hover:text-white hover:border-white/30 transition-all duration-200 flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-base text-zinc-300">description</span>
+<span class="">Resume</span>
+</button>
+<a class="nav-smooth-link px-5 py-2.5 rounded-full dark-slate-btn text-white font-label-md text-label-md transition-all duration-200 shadow-md hover:scale-[1.02]" href="#contact">
+  Let's Talk
+</a>
+</div>
+<!-- Mobile Hamburger Button -->
+<button aria-label="Toggle Navigation Menu" class="md:hidden flex items-center p-2 text-[#F8FAFC] hover:text-zinc-300 transition-colors" id="mobileMenuBtn">
+<span class="material-symbols-outlined text-2xl" id="menuIcon">menu</span>
+</button>
+</div>
+<!-- Mobile Navigation Drawer -->
+<div class="hidden md:hidden px-6 pt-2 pb-6 bg-[#101217]/95 backdrop-blur-2xl border-b border-white/10 flex-col space-y-3" id="mobileDrawer">
+<a class="mobile-nav-link text-[#F8FAFC] font-semibold py-2" href="#projects">Work</a>
+<a class="mobile-nav-link text-[#94A3B8] hover:text-[#F8FAFC] font-medium py-2" href="#expertise">Expertise</a>
+<a class="mobile-nav-link text-[#94A3B8] hover:text-[#F8FAFC] font-medium py-2" href="#experience">Experience</a>
+<a class="mobile-nav-link text-[#94A3B8] hover:text-[#F8FAFC] font-medium py-2" href="#contact">Contact</a>
+<div class="pt-2 flex flex-col gap-2">
+<button class="open-resume-btn w-full py-2.5 rounded-full border border-white/15 bg-zinc-900/90 text-[#F8FAFC] font-label-md text-label-md font-semibold flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-lg text-zinc-300">description</span>
+<span class="">View &amp; Download CV</span>
+</button>
+<a class="mobile-nav-link inline-block text-center w-full py-3 rounded-full dark-slate-btn text-white font-label-md text-label-md" href="#contact">
+  Let's Talk
+</a>
+</div>
+</div>
+</header>
+<main class="flex-grow pt-24 md:pt-28">
+<!-- Hero Section with Photo Slot & Modern Gradients -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20 relative">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+<!-- Hero Headline & Intro Column -->
+<div class="lg:col-span-7 space-y-8">
+<!-- Availability Badge -->
+<div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full dark-pill shadow-xs">
+<span class="relative flex h-2.5 w-2.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10B981] opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-[#10B981]"></span>
+</span>
+<span class="font-label-sm text-label-sm text-[#E2E8F0] font-semibold tracking-wide">Available for opportunities</span>
+</div>
+<!-- Hero Headline with Chrome Silver Gradient Accent -->
+<div class="space-y-4">
+<h1 class="hidden md:block font-display-hero text-display-hero text-[#F8FAFC] tracking-tight leading-[1.12]">
+  Hi, I'm Nihal Ayoob — UI/UX Designer dedicated to building <span class="chrome-gradient-text font-extrabold">seamless, high-end digital experiences.</span>
+</h1>
+<h1 class="md:hidden font-display-hero-mobile text-display-hero-mobile text-[#F8FAFC] tracking-tight leading-[1.15]">
+  Hi, I'm Nihal Ayoob — UI/UX Designer dedicated to building <span class="chrome-gradient-text font-extrabold">seamless, high-end digital experiences.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-[#94A3B8] max-w-2xl leading-relaxed">
+  Specializing in user personas, information architecture, and prototyping for e-commerce, on-demand services, and marketplace applications.
+</p>
+</div>
+<!-- CTA Buttons -->
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="nav-smooth-link px-7 py-3.5 rounded-full bg-white text-black font-label-md text-label-md font-semibold transition-all duration-200 shadow-[0_4px_20px_rgba(255,255,255,0.2)] hover:bg-zinc-200 hover:scale-[1.02] flex items-center gap-2" href="#projects">
+<span class="">Explore Projects</span>
+<span class="material-symbols-outlined text-lg">arrow_downward</span>
+</a>
+<button class="open-resume-btn px-7 py-3.5 rounded-full dark-slate-btn text-[#F8FAFC] font-label-md text-label-md font-medium hover:text-white transition-all duration-200 flex items-center gap-2 shadow-sm" id="downloadCvBtn">
+<span class="material-symbols-outlined text-lg text-zinc-300">download</span>
+<span class="">Download CV</span>
+</button>
+</div>
+<!-- Quick Metrics Highlights -->
+<div class="pt-8 grid grid-cols-2 gap-6 border-t border-white/[0.08] md:grid-cols-3">
+<div>
+<div class="font-headline-md text-headline-md text-[#F8FAFC] font-bold">100%</div>
+<div class="font-label-sm text-label-sm text-[#94A3B8] uppercase tracking-wider font-semibold">Pixel Precision</div>
+</div>
+<div>
+<div class="font-headline-md text-headline-md text-[#F8FAFC] font-bold">End-to-End</div>
+<div class="font-label-sm text-label-sm text-[#94A3B8] uppercase tracking-wider font-semibold">Product Scope</div>
+</div>
+
+<div>
+<div class="font-headline-md text-headline-md text-[#F8FAFC] font-bold">Kannur / Kochi</div>
+<div class="font-label-sm text-label-sm text-[#94A3B8] uppercase tracking-wider font-semibold">Kerala, India</div>
+</div>
+</div>
+</div>
+<!-- Hero Photo / Portrait Slot Column -->
+<div class="lg:col-span-5 flex justify-center lg:justify-end">
+<div class="relative w-full max-w-[360px] sm:max-w-[400px]">
+<!-- Soft animated gradient halo behind card -->
+<div class="absolute -inset-2 bg-gradient-to-r from-zinc-600 via-slate-500 to-zinc-700 rounded-3xl blur-2xl opacity-25 group-hover:opacity-40 transition duration-700"></div>
+<!-- Profile Card Frame -->
+<div class="relative w-full rounded-3xl glass-surface p-5 border border-white/15 shadow-2xl flex flex-col items-center">
+<div class="w-full h-80 rounded-2xl bg-zinc-950/85 border border-white/[0.08] overflow-hidden relative group"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgZETdRRaXKupF1HVLxCAjCCSsBvdFLRI56i1awiI1t6O2LzbzIZUBU9AiEV-WOnHjsSyJnJnVFoGNiC4TutQKB17hmvBTKO60KdD4GNUisym5mxPD3S0u594jF9oFyb27Go65Z3mssCaGzPU9QMghL_-ypntL4Pk0FN6G-XgA76QCUcPvrfTo2qmek1aaDIvyQlaeilrtkq-ZuRpWhXBG2lciogJ4X-QLGyFUKzMZ9tW5SSfZsqTEGYLWc1WSyIs2QA" alt="Nihal Ayoob" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" style="object-position: center 20%;"><div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none"></div><div class="absolute bottom-3 left-3 right-3 flex items-center justify-between pointer-events-none"><div class="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-xs text-white font-medium flex items-center gap-1.5"><span class="w-2 h-2 rounded-full bg-emerald-400"></span><span class="">Nihal Ayoob</span></div><span class="px-2.5 py-1 rounded-full bg-black/60 backdrop-blur-md border border-white/10 text-xs text-zinc-300 font-medium">UI/UX Designer</span></div></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Selected Works Section (Has ID "projects" and smooth scroll support) -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-16 scroll-mt-24" id="projects">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-6">
+<div id="filterHeading">
+<span class="font-label-sm text-label-sm text-zinc-400 font-semibold uppercase tracking-wider">Portfolio</span>
+<h2 class="hidden md:block font-headline-lg text-headline-lg text-[#F8FAFC] tracking-tight mt-1">Featured Case Studies</h2>
+<h2 class="md:hidden font-headline-lg-mobile text-headline-lg-mobile text-[#F8FAFC] tracking-tight mt-1">Featured Case Studies</h2>
+</div>
+<!-- Category Filter Tabs -->
+<div class="flex flex-wrap gap-2 p-1.5 bg-[#12141a]/80 backdrop-blur-md border border-white/15 rounded-full shadow-inner" id="filterContainer">
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-200 bg-white text-black font-semibold shadow-sm" data-filter="all">
+  All (4)
+</button>
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-200 text-[#94A3B8] hover:text-white hover:bg-white/[0.08]" data-filter="web">
+  Web Design (1)
+</button>
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-200 text-[#94A3B8] hover:text-white hover:bg-white/[0.08]" data-filter="mobile">
+  Mobile App (2)
+</button>
+<button class="filter-btn px-4 py-2 rounded-full font-label-md text-label-md transition-all duration-200 text-[#94A3B8] hover:text-white hover:bg-white/[0.08]" data-filter="dashboard">
+  Dashboard (1)
+</button>
+</div>
+</div>
+<!-- Works Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="projectsGrid">
+<!-- Project 1: IWCSTORE -->
+<article class="project-card group glass-surface rounded-2xl overflow-hidden custom-card-shadow custom-card-hover flex flex-col" data-category="web">
+<div class="relative w-full h-64 md:h-72 bg-zinc-950 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100" data-alt="A pristine ultra-modern e-commerce showcase featuring high-end luxury timepieces on structured architectural minimalist pedestals." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDrpDDNzuik60XEAdkTpGQsqD3W6EjoMAnPrshbGUY4CvkVMFzrtcobJ0JlFEuDmZ3rH44H05-qB2YYXatBwL__k-Yq0wBesr8gf54SAm7xXEE-PW-EPM99bux7nL4zOmnXgLJDejFnLSF-bmjwSd8__mtuXu8CDkia44Xpzs8Ncc383zqQbU6iwnpQJ3umP309zmo97MOlQmc0J6HgCOybLWQ-64829HT1VcHUyMr8prLpEt0Io02KjaEhkVO1dVCcA" alt="IWCSTORE Luxury Watch Store Showcase">
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md font-label-sm text-label-sm text-white font-semibold border border-white/20 shadow-md">Web Design</span>
+</div>
+</div>
+<div class="p-6 md:p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold">IWCSTORE</h3>
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-white group-hover:translate-x-1 transition-all">arrow_outward</span>
+</div>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-6">
+  Legacy 1961 watch retailer in Taliparamba transformed into a luxury digital storefront with frictionless catalog exploration and curated customer journeys.
+</p>
+</div>
+<div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-[#E2E8F0] font-label-sm text-label-sm font-medium border border-white/10">E-commerce</span>
+<span class="px-2.5 py-1 rounded-md bg-white/[0.03] text-zinc-400 font-label-sm text-label-sm font-medium border border-white/[0.05]">Design System</span>
+<span class="px-2.5 py-1 rounded-md bg-white/[0.03] text-zinc-400 font-label-sm text-label-sm font-medium border border-white/[0.05]">Responsive</span>
+</div>
+<button class="w-full py-2.5 rounded-lg border border-white/10 font-label-md text-label-md font-medium text-[#E2E8F0] hover:bg-white/[0.08] hover:border-white/25 hover:text-white transition-all text-center flex items-center justify-center gap-1.5" onclick="openModal('iwc')">
+<span class="">View Case Study</span>
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project 2: Tempus -->
+<article class="project-card group glass-surface rounded-2xl overflow-hidden custom-card-shadow custom-card-hover flex flex-col" data-category="mobile">
+<div class="relative w-full h-64 md:h-72 bg-zinc-950 overflow-hidden"><img alt="Tempus Mobile App Case Study" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9W1_fs1cO5Tjh6smtnSM5nhPuX2KN9svEt8PZmWUXl2m5wQtUaxHvY1LgoB3LKcEchStkUFLXT3XCiD0i8UBBTbuEYQQJHhOmKH8Kc6zB4sFd5qyAt6AgSGWYAHB3mVCxEcdHBIc_XjDK1uYHJngtTfseoYm7b__BA39-izySM_5len-AUEN6XeLdCDMnN15Fiv8lq3NlKHIbYIH7wAaj8qEkyCY4i_YetJ8yuVTTmbykmShmqGRBC4jOIIcsw9-8yQ"><div class="absolute top-4 left-4"><span class="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md font-label-sm text-label-sm text-white font-semibold border border-white/20 shadow-md">Mobile App</span></div></div>
+<div class="p-6 md:p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold">Tempus</h3>
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-white group-hover:translate-x-1 transition-all">arrow_outward</span>
+</div>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-6">
+  On-demand automotive platform integrating doorstep vehicle servicing, scheduled spare-parts marketplace, and emergency contact-free fuel delivery.
+</p>
+</div>
+<div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-[#E2E8F0] font-label-sm text-label-sm font-medium border border-white/10">Mobile UI/UX</span>
+<span class="px-2.5 py-1 rounded-md bg-white/[0.03] text-zinc-400 font-label-sm text-label-sm font-medium border border-white/[0.05]">Multi-service</span>
+<span class="px-2.5 py-1 rounded-md bg-white/[0.03] text-zinc-400 font-label-sm text-label-sm font-medium border border-white/[0.05]">iOS / Android</span>
+</div>
+<button class="w-full py-2.5 rounded-lg border border-white/10 font-label-md text-label-md font-medium text-[#E2E8F0] hover:bg-white/[0.08] hover:border-white/25 hover:text-white transition-all text-center flex items-center justify-center gap-1.5" onclick="openModal('tempus')">
+<span class="">View Case Study</span>
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project 3: Werun -->
+<article class="project-card group glass-surface rounded-2xl overflow-hidden custom-card-shadow custom-card-hover flex flex-col" data-category="mobile">
+<div class="relative w-full h-64 md:h-72 bg-zinc-950 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100" data-alt="An expansive digital advertising marketplace interface presented on contemporary smartphone hardware." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRHrniBrMlC7u541liB8M3rnaqTQ9-y7zHK8h0p2-zFvtunpTfJzHmKXsJfsMisCEnLY7zk6sHtfOP1ewITbs6bbUu_VEjT7F3vuSx-qCDI7BD2e_6VYKysyk6TBuqU4idF__blYp2Xu2-xOroWX61rIYgGVLOoq4jjcCKa4VyGfAqcuAle5EemSG3hi7e-12YyRjqTbjK2jjXY1kd7vS3uRgxl-4I6awQ1ktTq21ZOBbaE5sxpY-kZJwd8gb74ru4uQ" alt="Werun advertising app mockup">
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md font-label-sm text-label-sm text-white font-semibold border border-white/20 shadow-md">Mobile App</span>
+</div>
+</div>
+<div class="p-6 md:p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold">Werun</h3>
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-white group-hover:translate-x-1 transition-all">arrow_outward</span>
+</div>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-6">
+  Two-sided digital advertising marketplace developed during Zoople internship for ad space buyers and media owners to negotiate and verify placements.
+</p>
+</div>
+<div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-[#E2E8F0] font-label-sm text-label-sm font-medium border border-white/10">Marketplace</span>
+<span class="px-2.5 py-1 rounded-md bg-white/[0.03] text-zinc-400 font-label-sm text-label-sm font-medium border border-white/[0.05]">B2B / B2C</span>
+<span class="px-2.5 py-1 rounded-md bg-white/[0.03] text-zinc-400 font-label-sm text-label-sm font-medium border border-white/[0.05]">User Research</span>
+</div>
+<button class="w-full py-2.5 rounded-lg border border-white/10 font-label-md text-label-md font-medium text-[#E2E8F0] hover:bg-white/[0.08] hover:border-white/25 hover:text-white transition-all text-center flex items-center justify-center gap-1.5" onclick="openModal('werun')">
+<span class="">View Case Study</span>
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Project 4: Analytics Dashboard -->
+<article class="project-card group glass-surface rounded-2xl overflow-hidden custom-card-shadow custom-card-hover flex flex-col" data-category="dashboard">
+<div class="relative w-full h-64 md:h-72 bg-zinc-950 overflow-hidden">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105 opacity-90 group-hover:opacity-100" data-alt="A modern data visualization workspace showing high-density SaaS marketplace metrics." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB-apOy-v1w8T98SYGFyy_rlfQQ9W6_7vS7Az--N7LoTyA_u5kOOgIbDzknL7MNf3ewVTWoz0SQMFJDZopWQLRoiqhXQV_U7iR7BYXgPXkmUOYEKnUHbcMlh7MqocNi_SZp5zBlhE8lVyAZUruyTPvqplgaeWrkzbvPGa7Rjybul2JOArr7wE-29zrK2u_yq7pBVLS1qd-PShxj3VvLv2Pg_g4qzssRgBKEwpuJ2cRf6AnBBTSf0Yx">
+<div class="absolute top-4 left-4">
+<span class="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md font-label-sm text-label-sm text-white font-semibold border border-white/20 shadow-md">Dashboard</span>
+</div>
+</div>
+<div class="p-6 md:p-8 flex flex-col justify-between flex-grow">
+<div>
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold">Marketplace Engine</h3>
+<span class="material-symbols-outlined text-zinc-500 group-hover:text-white group-hover:translate-x-1 transition-all">arrow_outward</span>
+</div>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-6">
+  High-density management interface for tracking multi-vendor gross merchandise value (GMV), cohort retention, and transactional conversion metrics.
+</p>
+</div>
+<div>
+<div class="flex flex-wrap gap-2 mb-6">
+<span class="px-2.5 py-1 rounded-md bg-white/[0.05] text-[#E2E8F0] font-label-sm text-label-sm font-medium border border-white/10">SaaS Design</span>
+<span class="px-2.5 py-1 rounded-md bg-white/[0.03] text-zinc-400 font-label-sm text-label-sm font-medium border border-white/[0.05]">Data Viz</span>
+<span class="px-2.5 py-1 rounded-md bg-white/[0.03] text-zinc-400 font-label-sm text-label-sm font-medium border border-white/[0.05]">High-Contrast UI</span>
+</div>
+<button class="w-full py-2.5 rounded-lg border border-white/10 font-label-md text-label-md font-medium text-[#E2E8F0] hover:bg-white/[0.08] hover:border-white/25 hover:text-white transition-all text-center flex items-center justify-center gap-1.5" onclick="openModal('dashboard')">
+<span class="">View Case Study</span>
+<span class="material-symbols-outlined text-base">visibility</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Expertise & Tool Stack Grid (Has ID "expertise" and smooth scroll support) -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-16 scroll-mt-24" id="expertise">
+<div class="mb-12">
+<span class="font-label-sm text-label-sm text-zinc-400 font-semibold uppercase tracking-wider">Methodology</span>
+<h2 class="hidden md:block font-headline-lg text-headline-lg text-[#F8FAFC] tracking-tight mt-1">Core Stack &amp; Authentic Tooling</h2>
+<h2 class="md:hidden font-headline-lg-mobile text-headline-lg-mobile text-[#F8FAFC] tracking-tight mt-1">Core Stack &amp; Authentic Tooling</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+<!-- 1. Figma Card -->
+<div class="tech-card p-6 rounded-2xl glass-surface custom-card-shadow custom-card-hover flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-zinc-900 border border-white/10 flex items-center justify-center mb-5 tech-logo-container shadow-sm">
+<!-- Authentic Figma Logo -->
+<svg fill="none" height="42" viewBox="0 0 38 57" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M19 28.5C19 23.2533 23.2533 19 28.5 19C33.7467 19 38 23.2533 38 28.5C38 33.7467 33.7467 38 28.5 38C23.2533 38 19 33.7467 19 28.5Z" fill="#1ABCFE"></path>
+<path d="M0 47.5C0 42.2533 4.25329 38 9.5 38H19V47.5C19 52.7467 14.7467 57 9.5 57C4.25329 57 0 52.7467 0 47.5Z" fill="#0ACF83"></path>
+<path d="M19 0V19H28.5C33.7467 19 38 14.7467 38 9.5C38 4.25329 33.7467 0 28.5 0H19Z" fill="#FF7262"></path>
+<path d="M0 9.5C0 14.7467 4.25329 19 9.5 19H19V0H9.5C4.25329 0 0 4.25329 0 9.5Z" fill="#F24E1E"></path>
+<path d="M0 28.5C0 33.7467 4.25329 38 9.5 38H19V19H9.5C4.25329 19 0 23.2533 0 28.5Z" fill="#A259FF"></path>
+</svg>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold mb-2">Figma</h3>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-4">
+  Advanced responsive auto-layouts, scalable design tokens, dynamic variants, interactive micro-states, and living design systems.
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.06]">
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Tokens</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Components</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Prototyping</span>
+</div>
+</div>
+<!-- 2. Miro Card -->
+<div class="tech-card p-6 rounded-2xl glass-surface custom-card-shadow custom-card-hover flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-[#FFD02F] flex items-center justify-center mb-5 tech-logo-container shadow-sm"><svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M6.5 17.5L9.2 6.5H7.3L4.6 17.5H6.5ZM10.2 17.5L12.9 6.5H11L8.3 17.5H10.2ZM13.9 17.5L16.6 6.5H14.7L12 17.5H13.9ZM17.6 17.5L20.3 6.5H18.4L15.7 17.5H17.6Z" fill="#050038"></path></svg></div>
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold mb-2">Miro</h3>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-4">
+  Qualitative user discovery, stakeholder empathy mapping, end-to-end journey maps, and systemic information architecture hierarchies.
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.06]">
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">User Journeys</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">IA Maps</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Workshops</span>
+</div>
+</div>
+<!-- 3. Stitch Card -->
+<div class="tech-card p-6 rounded-2xl glass-surface custom-card-shadow custom-card-hover flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-gradient-to-tr from-slate-700 to-zinc-600 flex items-center justify-center mb-5 tech-logo-container shadow-sm">
+<!-- Clean Modern Stitch / AI Design Emblem -->
+<svg fill="none" height="28" viewBox="0 0 24 24" width="28" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2L14.4 7.6L20 10L14.4 12.4L12 18L9.6 12.4L4 10L9.6 7.6L12 2Z" fill="#FFFFFF"></path>
+<path d="M19 16L20.2 18.8L23 20L20.2 21.2L19 24L17.8 21.2L15 20L17.8 18.8L19 16Z" fill="#D4D4D8"></path>
+</svg>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold mb-2">Stitch</h3>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-4">
+  AI-augmented exploratory UI synthesis, rapid layout hypothesis generation, and streamlined tokenized design system scaffolding.
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.06]">
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Generative UI</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Rapid Ideation</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Prototypes</span>
+</div>
+</div>
+<!-- 4. Framer Card -->
+<div class="tech-card p-6 rounded-2xl glass-surface custom-card-shadow custom-card-hover flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-[#0055FF] flex items-center justify-center mb-5 tech-logo-container shadow-sm">
+<!-- Authentic Framer Geometric F Logo -->
+<svg fill="none" height="34" viewBox="0 0 24 36" width="24" xmlns="http://www.w3.org/2000/svg">
+<path d="M0 0H24V12H12L0 0Z" fill="white"></path>
+<path d="M0 12H12V24H0L12 12V24H0V12Z" fill="white" opacity="0.9"></path>
+<path d="M0 24H12V36L0 24Z" fill="white"></path>
+</svg>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold mb-2">Framer</h3>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-4">
+  Production-grade interactive web prototyping, scroll-linked animations, responsive layout variants, and instant deployment.
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.06]">
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Interactive</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Micro-interactions</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Webflow</span>
+</div>
+</div>
+<!-- 5. Adobe Photoshop Card -->
+<div class="tech-card p-6 rounded-2xl glass-surface custom-card-shadow custom-card-hover flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-[#001E36] border border-[#002b4d] flex items-center justify-center mb-5 tech-logo-container shadow-sm">
+<!-- Authentic Adobe Photoshop Ps Badge -->
+<span class="text-[#31A8FF] font-black text-2xl tracking-tighter" style="font-family: sans-serif;">Ps</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold mb-2">Adobe Photoshop</h3>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-4">
+  High-fidelity raster imagery treatment, precision lighting/texture rendering, product visual mockups, and composite creative graphics.
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.06]">
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Raster Editing</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Lighting</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Mockups</span>
+</div>
+</div>
+<!-- 6. Adobe Illustrator Card -->
+<div class="tech-card p-6 rounded-2xl glass-surface custom-card-shadow custom-card-hover flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-[#330000] border border-[#4d0000] flex items-center justify-center mb-5 tech-logo-container shadow-sm">
+<!-- Authentic Adobe Illustrator Ai Badge -->
+<span class="text-[#FF9A00] font-black text-2xl tracking-tighter" style="font-family: sans-serif;">Ai</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold mb-2">Adobe Illustrator</h3>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-4">
+  Scalable vector graphic architecture, corporate brand identities, bespoke iconography sets, logomarks, and technical vector art.
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.06]">
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Vector Art</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Branding</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Iconography</span>
+</div>
+</div>
+<!-- 7. ChatGPT / OpenAI Card -->
+<div class="tech-card p-6 rounded-2xl glass-surface custom-card-shadow custom-card-hover flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-[#10A37F] flex items-center justify-center mb-5 tech-logo-container shadow-sm"><svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5157-4.9108 6.0462 6.0462 0 0 0-6.5098-2.9A6.0651 6.0651 0 0 0 4.9807 4.1818a5.9847 5.9847 0 0 0-3.9977 2.9 6.0462 6.0462 0 0 0 .7427 7.0966 5.98 5.98 0 0 0 .511 4.9107 6.051 6.051 0 0 0 6.5146 2.9001A5.9847 5.9847 0 0 0 13.2599 24a6.0557 6.0557 0 0 0 5.7718-4.2058 5.9894 5.9894 0 0 0 3.9977-2.9001 6.0557 6.0557 0 0 0-.7475-7.0729zm-9.022 12.6081a4.4755 4.4755 0 0 1-2.8764-1.0408l.1419-.0804 4.7783-2.7582a.7948.7948 0 0 0 .3927-.6813v-6.7369l2.02 1.1683a.071.071 0 0 1 .038.052v5.5826a4.5045 4.5045 0 0 1-4.4945 4.4947zm-9.6607-4.1254a4.4708 4.4708 0 0 1-.5346-3.0137l.142.0852 4.783 2.7582a.7712.7712 0 0 0 .7806 0l5.8428-3.3685v2.3324a.0804.0804 0 0 1-.0332.0615L9.74 19.9502a4.4992 4.4992 0 0 1-6.1408-1.6464zM2.3408 7.8956a4.485 4.485 0 0 1 2.3655-1.9728V11.6a.7664.7664 0 0 0 .3879.6765l5.8144 3.3543-2.0201 1.1683a.0757.0757 0 0 1-.071 0l-4.8303-2.7866A4.504 4.504 0 0 1 2.3408 7.8956zm16.0993 3.8558L12.5973 8.3829l2.02-1.1635a.0804.0804 0 0 1 .071 0l4.8303 2.7913a4.4944 4.4944 0 0 1-.6765 8.1042v-5.6772a.79.79 0 0 0-.402-.6863zm2.0107-3.0231l-.142-.0852-4.7735-2.7818a.7759.7759 0 0 0-.7854 0L9.409 9.2297V6.8974a.0662.0662 0 0 1 .0284-.0615l4.8303-2.7866a4.4992 4.4992 0 0 1 6.6802 4.6607zM8.3065 12.863l-2.02-1.1635a.0804.0804 0 0 1-.038-.0567V6.0748a4.4992 4.4992 0 0 1 7.3757-3.4537l-.142.0805L8.704 5.4598a.7948.7948 0 0 0-.3927.6813l-.0048 6.7219zm1.0315-1.9633l2.659-1.533 2.659 1.533v3.066l-2.659 1.533-2.659-1.533v-3.066z"></path></svg></div>
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold mb-2">ChatGPT</h3>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-4">
+  AI-prompt engineering for UX research, synthesis of complex user interviews, iterative persona generation, and conversational microcopy refinement.
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.06]">
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">UX Copywriting</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Research AI</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Prompting</span>
+</div>
+</div>
+<!-- 8. Adobe Premiere Pro Card -->
+<div class="tech-card p-6 rounded-2xl glass-surface custom-card-shadow custom-card-hover flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 rounded-xl bg-[#00005B] border border-[#1A1A80] flex items-center justify-center mb-5 tech-logo-container shadow-sm">
+<!-- Authentic Adobe Premiere Pro Pr Badge -->
+<span class="text-[#EA77FF] font-black text-2xl tracking-tighter" style="font-family: sans-serif;">Pr</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold mb-2">Adobe Premiere Pro</h3>
+<p class="font-body-md text-body-md text-[#94A3B8] mb-4">
+  Dynamic video editing, motion sequencing, video case-study walkthroughs, timing precision, and engaging reel storytelling.
+</p>
+</div>
+<div class="flex flex-wrap gap-1.5 pt-3 border-t border-white/[0.06]">
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Video Editing</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Timeline Sequencing</span>
+<span class="px-2 py-0.5 text-xs font-medium rounded bg-white/[0.05] text-zinc-300">Motion Polish</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Experience & Education Timeline (Has ID "experience" and smooth scroll support) -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-16 scroll-mt-24" id="experience">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Experience Column -->
+<div>
+<span class="font-label-sm text-label-sm text-zinc-400 font-semibold uppercase tracking-wider">Background</span>
+<h2 class="font-headline-lg text-headline-lg text-[#F8FAFC] tracking-tight mt-1 mb-8">Work Experience</h2>
+<div class="relative border-l border-zinc-700/80 ml-3 pl-8 space-y-12">
+<!-- Timeline Item 1: Zoople -->
+<div class="relative group">
+<div class="absolute -left-[39px] top-1 w-4 h-4 rounded-full bg-zinc-900 border-2 border-white group-hover:bg-white transition-colors"></div>
+<div class="flex flex-wrap items-center justify-between mb-1 gap-2">
+<span class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold">UI/UX Intern</span>
+<span class="px-2.5 py-0.5 rounded-full bg-white/[0.06] text-zinc-300 font-label-sm text-label-sm font-medium border border-white/[0.08]">Nov 2025 – Dec 2025</span>
+</div>
+<div class="text-[#E2E8F0] font-semibold font-body-md text-body-md mb-3">Zoople Technologies • Kochi, Kerala</div>
+<p class="font-body-md text-body-md text-[#94A3B8] leading-relaxed mb-4">
+  Spearheaded the end-to-end user experience design for Werun. Mapped comprehensive user personas across two-sided marketplace stakeholders, architected information hierarchies, and delivered verified high-fidelity interactive prototypes.
+</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 text-xs font-medium bg-white/[0.04] text-zinc-300 rounded-md border border-white/[0.06]">User Research</span>
+<span class="px-2.5 py-1 text-xs font-medium bg-white/[0.04] text-zinc-300 rounded-md border border-white/[0.06]">Wireframing</span>
+<span class="px-2.5 py-1 text-xs font-medium bg-white/[0.04] text-zinc-300 rounded-md border border-white/[0.06]">Interactive Testing</span>
+</div>
+</div>
+<!-- Timeline Item 2: Freelance Graphic Designer -->
+<div class="relative group">
+<div class="absolute -left-[39px] top-1 w-4 h-4 rounded-full bg-zinc-900 border-2 border-zinc-500 group-hover:bg-white transition-colors"></div>
+<div class="flex flex-wrap items-center justify-between mb-1 gap-2">
+<span class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold">Freelance Graphic Designer</span>
+<span class="px-2.5 py-0.5 rounded-full bg-white/[0.06] text-zinc-300 font-label-sm text-label-sm font-medium border border-white/[0.08]">2024 – Present</span>
+</div>
+<div class="text-[#E2E8F0] font-semibold font-body-md text-body-md mb-3">Independent • Remote / Global</div>
+<p class="font-body-md text-body-md text-[#94A3B8] leading-relaxed mb-4">
+  Crafted high-impact visual identities, digital marketing assets, brand guidelines, and vector illustrations for diverse global and regional clients. Translated client briefs into compelling visual narratives across social media, e-commerce, and print media.
+</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2.5 py-1 text-xs font-medium bg-white/[0.04] text-zinc-300 rounded-md border border-white/[0.06]">Brand Identity</span>
+<span class="px-2.5 py-1 text-xs font-medium bg-white/[0.04] text-zinc-300 rounded-md border border-white/[0.06]">Graphic Design</span>
+<span class="px-2.5 py-1 text-xs font-medium bg-white/[0.04] text-zinc-300 rounded-md border border-white/[0.06]">Art Direction</span>
+<span class="px-2.5 py-1 text-xs font-medium bg-white/[0.04] text-zinc-300 rounded-md border border-white/[0.06]">Vector Illustration</span>
+<span class="px-2.5 py-1 text-xs font-medium bg-white/[0.04] text-zinc-300 rounded-md border border-white/[0.06]">Adobe Creative Suite</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Education Column -->
+<div>
+<span class="font-label-sm text-label-sm text-zinc-400 font-semibold uppercase tracking-wider">Foundation</span>
+<h2 class="font-headline-lg text-headline-lg text-[#F8FAFC] tracking-tight mt-1 mb-8">Education &amp; Credentials</h2>
+<div class="space-y-5">
+<!-- Education 1 -->
+<div class="p-6 rounded-2xl glass-surface custom-card-shadow">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold">UI/UX Designing Certification</h3>
+<span class="material-symbols-outlined text-[#10B981]">verified</span>
+</div>
+<div class="text-zinc-300 font-semibold font-body-md text-body-md">Zoople Technologies</div>
+<p class="font-body-md text-body-md text-[#94A3B8] mt-2">Comprehensive focus on design systems, iterative usability validation, and Figma workflow excellence.</p>
+</div>
+<!-- Education 2 -->
+<div class="p-6 rounded-2xl glass-surface custom-card-shadow">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold">Motion Graphics &amp; Graphic Design</h3>
+<span class="material-symbols-outlined text-[#10B981]">verified</span>
+</div>
+<div class="text-zinc-300 font-semibold font-body-md text-body-md">Kerala Digital Academy</div>
+<p class="font-body-md text-body-md text-[#94A3B8] mt-2">Specialized training in timeline dynamics, narrative visual flow, and brand asset generation.</p>
+</div>
+<!-- Education 3 -->
+<div class="p-6 rounded-2xl glass-surface custom-card-shadow">
+<div class="flex items-center justify-between mb-2">
+<h3 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-bold">Bachelor of Business Administration (BBA)</h3>
+<span class="material-symbols-outlined text-zinc-400">school</span>
+</div>
+<div class="text-zinc-300 font-semibold font-body-md text-body-md">Sir Syed Institute</div>
+<p class="font-body-md text-body-md text-[#94A3B8] mt-2">Core foundation in organizational structures, market dynamics, product economics, and consumer psychology.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Direct Callout Section (Has ID "contact" and smooth scroll support) -->
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-20 scroll-mt-24" id="contact">
+<div class="relative overflow-hidden rounded-3xl glass-surface-elevated p-8 md:p-16 custom-card-shadow">
+<!-- Ambient decorative glow in contact card -->
+<div class="absolute -right-24 -bottom-24 w-80 h-80 rounded-full bg-slate-500/20 blur-3xl pointer-events-none"></div>
+<div class="max-w-3xl relative z-10">
+<span class="font-label-sm text-label-sm text-zinc-400 font-semibold uppercase tracking-wider">Get in Touch</span>
+<h2 class="hidden md:block font-display-hero text-headline-lg text-[#F8FAFC] tracking-tight mt-2 mb-6">
+  Let's build something <span class="chrome-gradient-text font-extrabold">extraordinary together.</span>
+</h2>
+<h2 class="md:hidden font-headline-lg-mobile text-headline-lg-mobile text-[#F8FAFC] tracking-tight mt-2 mb-6">
+  Let's build something <span class="chrome-gradient-text font-extrabold">extraordinary together.</span>
+</h2>
+<p class="font-body-lg text-body-lg text-[#94A3B8] mb-10 leading-relaxed">
+  Whether you are launching a greenfield product, refactoring a legacy enterprise app, or need an agile designer to join your sprint, my inbox is open.
+</p>
+<!-- Interactive Email Module -->
+<div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 p-3 rounded-2xl bg-[#0b0d12]/90 border border-white/15 max-w-xl shadow-inner">
+<div class="flex items-center gap-3 px-3 py-2 flex-grow overflow-hidden">
+<span class="material-symbols-outlined text-zinc-300 text-2xl">mail</span>
+<span class="font-body-md text-body-md font-semibold text-[#F8FAFC] truncate select-all" id="emailText">nihalayyoob12@gmail.com</span>
+</div>
+<button class="px-5 py-3 rounded-xl bg-white text-black hover:bg-zinc-200 font-label-md text-label-md font-semibold transition-all flex items-center justify-center gap-2 relative shadow-md hover:scale-[1.02]" id="copyEmailBtn">
+<span class="material-symbols-outlined text-lg" id="copyIcon">content_copy</span>
+<span class="" id="copyBtnText">Copy Email</span>
+</button>
+</div>
+<!-- Location & Availability Tag -->
+<div class="mt-8 flex flex-wrap items-center gap-6 text-[#94A3B8] font-body-md text-body-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-zinc-400">location_on</span>
+<span class="text-[#E2E8F0] font-medium">Kannur &amp; Kochi, Kerala, India</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[#10B981]">schedule</span>
+<span class="text-[#E2E8F0] font-medium">Available for Remote &amp; Hybrid Roles</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full bg-[#0e1015]/90 backdrop-blur-md border-t border-white/10">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-6 md:px-12 py-10 gap-6">
+<!-- Brand & Copyright -->
+<div class="flex flex-col md:flex-row items-center gap-4 text-center md:text-left">
+<a class="font-headline-sm text-headline-sm font-bold text-[#F8FAFC] hover:text-white transition-colors flex items-center gap-1.5" href="#">
+<span class="w-2 h-2 rounded-full bg-gradient-to-tr from-white to-zinc-400"></span>
+<span class="">NA.</span>
+</a>
+<span class="text-[#94A3B8] font-body-md text-body-md">
+  © 2025 Nihal Ayoob. All rights reserved. Precision UI/UX Design.
+</span>
+</div>
+<!-- Links Cluster -->
+<div class="flex flex-wrap items-center justify-center gap-6">
+<a class="nav-smooth-link text-[#E2E8F0] font-semibold hover:text-white transition-colors duration-200" href="#projects">Work</a>
+<a class="nav-smooth-link text-[#94A3B8] hover:text-white transition-colors duration-200" href="#experience">Experience</a>
+<a class="text-[#94A3B8] hover:text-white transition-colors duration-200" href="https://www.behance.net/nihalayyoob" rel="noopener noreferrer" target="_blank">Behance</a>
+<a class="text-[#94A3B8] hover:text-white transition-colors duration-200" href="mailto:nihalayyoob12@gmail.com">Email</a>
+<button class="open-resume-btn text-zinc-300 font-medium hover:text-white hover:underline flex items-center gap-1">
+<span class="">View Resume</span>
+<span class="material-symbols-outlined text-sm">open_in_new</span>
+</button>
+</div>
+</div>
+</footer>
+<!-- Case Study Interactive Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="caseStudyModal">
+<div class="glass-surface-elevated max-w-2xl w-full rounded-3xl p-6 md:p-8 border border-white/15 shadow-2xl max-h-[90vh] overflow-y-auto transform scale-95 transition-transform duration-300" id="modalBox">
+<div class="flex items-center justify-between pb-4 border-b border-white/10 mb-6">
+<div>
+<span class="font-label-sm text-label-sm text-zinc-400 font-semibold uppercase tracking-wider" id="modalCategory">Category</span>
+<h3 class="font-headline-md text-headline-md text-[#F8FAFC] font-bold" id="modalTitle">Project Name</h3>
+</div>
+<button class="w-10 h-10 rounded-full bg-zinc-800 text-zinc-300 hover:text-white hover:bg-zinc-700 flex items-center justify-center hover:scale-105 transition-all" onclick="closeModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<div class="space-y-6">
+<div>
+<h4 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-semibold mb-2">Challenge &amp; Scope</h4>
+<p class="font-body-md text-body-md text-[#94A3B8] leading-relaxed" id="modalChallenge"></p>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-semibold mb-2">UX Strategy &amp; Key Features</h4>
+<ul class="list-disc list-inside space-y-2 font-body-md text-body-md text-[#94A3B8]" id="modalFeatures"></ul>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-[#F8FAFC] font-semibold mb-2">Applied Technologies</h4>
+<div class="flex flex-wrap gap-2" id="modalTags"></div>
+</div>
+<div class="pt-4 border-t border-white/10 flex justify-end gap-3">
+<button class="px-5 py-2.5 rounded-full border border-white/15 font-label-md text-label-md text-zinc-300 hover:bg-white/[0.08] hover:text-white transition-colors" onclick="closeModal()">
+  Close
+</button>
+<a class="nav-smooth-link px-5 py-2.5 rounded-full bg-white text-black font-semibold font-label-md text-label-md hover:bg-zinc-200 transition-colors" href="#contact" onclick="closeModal()">
+  Discuss Case Study
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Resume Viewer & Download Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center p-3 md:p-6 bg-black/85 backdrop-blur-md opacity-0 pointer-events-none transition-opacity duration-300" id="resumeModal">
+<div class="bg-[#12141A] max-w-4xl w-full rounded-2xl md:rounded-3xl border border-white/15 shadow-2xl flex flex-col max-h-[94vh] overflow-hidden transform scale-95 transition-transform duration-300" id="resumeModalBox">
+<!-- Modal Header Bar -->
+<div class="px-6 py-4 border-b border-white/10 flex items-center justify-between bg-[#161820]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-xl bg-white/[0.06] border border-white/10 flex items-center justify-center text-white">
+<span class="material-symbols-outlined text-2xl">picture_as_pdf</span>
+</div>
+<div>
+<h3 class="font-headline-sm text-base md:text-lg text-[#F8FAFC] font-bold">Nihal Ayoob — Official CV</h3>
+<p class="font-label-sm text-xs text-[#94A3B8]">UI/UX Designer • 2 Pages Document</p>
+</div>
+</div>
+<!-- Controls cluster -->
+<div class="flex items-center gap-2">
+<!-- Page Switcher -->
+<div class="flex items-center bg-zinc-900 border border-white/10 rounded-full p-1 text-xs font-semibold">
+<button class="px-3 py-1 rounded-full transition-all bg-white text-black" id="page1TabBtn">Page 1</button>
+<button class="px-3 py-1 rounded-full transition-all text-[#94A3B8] hover:text-white" id="page2TabBtn">Page 2</button>
+</div>
+<!-- Download Button -->
+<a class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-white text-black hover:bg-zinc-200 text-xs font-semibold transition-all shadow-sm" download="Nihal_Ayoob_UIUX_Resume_Page1.png" href="https://lh3.googleusercontent.com/aida-public/AB6AXuD6xTbl9ksuGxRT4-ey6RfDPWOu39_OlbNx4JtmeUCVjxCd3hPAT5PDD8fVFdQgCRQ7TFr-x1W0jSoykpLhaESJcBaJ-bosYmyNypNMtVSq38S55spxx1_Da2u3zi7cEHeIbp5iGvaBlYMdIXDFiTV8TuYtEILOlJMbCoWeqSa4XkwZochNayEsRbr0Yz5fyjEKVyy958J_ACeRk6Jv6QXN8JBexnl7BneSubNI9jgPanILPphoBysjgGZpAnBpGMA-jA" id="resumeDownloadAnchor">
+<span class="material-symbols-outlined text-base">download</span>
+<span class="">Download Page</span>
+</a>
+<!-- Close Button -->
+<button class="w-9 h-9 rounded-full bg-zinc-800 border border-white/10 flex items-center justify-center text-zinc-300 hover:text-white hover:bg-zinc-700 transition-all ml-1" id="closeResumeModalBtn">
+<span class="material-symbols-outlined text-xl">close</span>
+</button>
+</div>
+</div>
+<!-- Document Preview Scroll Area -->
+<div class="flex-grow overflow-y-auto p-4 md:p-8 bg-[#090A0D] flex justify-center items-start">
+<div class="w-full max-w-2xl bg-zinc-950 rounded-xl shadow-2xl border border-white/10 overflow-hidden transition-all duration-300">
+<!-- Page 1 Image -->
+<img alt="Nihal Ayoob UI/UX Resume Page 1" class="w-full h-auto object-contain block" id="resumeImgPage1" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNApOXpLkD9l7FuCr58nUie9rU1U0bzcAMXLxHWOjIKWA7vB_cam7nFcaHg8zmS_mVSoK-n2d4XML0IcSmSczCbO67p1S-I-HFVk_ZewLq6qxfDBEhJExuiNP6n65ofvBNxd_owezJWxkWE3c9cqL-Np7_6jz1UiZFiDBIqe0VdLGQSgDaWArX8I0TGSaLqCXJBMiy0MXRBMqVorWvjh2QYueR_iWP14FimpQGguuW7sk23SdHtFBFf5iPnlGZlkAeZw">
+<!-- Page 2 Image -->
+<img alt="Nihal Ayoob UI/UX Resume Page 2" class="w-full h-auto object-contain hidden" id="resumeImgPage2" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9ZNrJgbdpY5KwhTr7npK-nMQ-PLDNSfEr3r_-gDT-NA_Lsl_OZ7UTqm1fgYmtfrgZviMDxZFZ0JeDsuAXyNC2Z2riqmT81yJLNfxFTI0q6QxLWEJGzDObCsRoIWOFPyIGzXP7bx0s0FZqqFShK02O-l6IlIp6W4n8-K7BDb4kV0ZBmBYl07GSXKAVSZ2eSm_syf1tCFjt9x0jVy1GSEkPLsc8Ev3-HaP6ifnshg8lgQjjNtlclTuKFgyAVY8WT8jG1g">
+</div>
+</div>
+<!-- Footer toolbar -->
+<div class="px-6 py-3 border-t border-white/10 bg-[#161820] flex flex-wrap items-center justify-between gap-3">
+<span class="text-xs text-[#94A3B8]">Kannur | nihalayyoob12@gmail.com | +91 9746370855</span>
+<div class="flex items-center gap-3">
+<button class="sm:hidden px-4 py-1.5 rounded-full bg-white text-black text-xs font-semibold flex items-center gap-1" id="mobileModalDownloadBtn">
+<span class="material-symbols-outlined text-sm">download</span>
+<span class="">Download</span>
+</button>
+<button class="px-4 py-1.5 rounded-full border border-white/15 text-zinc-300 text-xs font-medium hover:bg-white/[0.08]" onclick="closeResumeModal()">
+  Dismiss
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification Indicator -->
+<div class="fixed bottom-6 right-6 z-50 bg-[#161922] text-[#F8FAFC] border border-white/15 px-5 py-3 rounded-2xl shadow-2xl flex items-center gap-3 translate-y-24 opacity-0 transition-all duration-300" id="toastNotification">
+<span class="material-symbols-outlined text-[#10B981]" id="toastIcon">check_circle</span>
+<span class="font-label-md text-label-md" id="toastMessage">Notification message</span>
+</div>
+<!-- Vanilla JavaScript Interactivity -->
+<script>
+    // Project Dataset
+    const projectDetails = {
+      iwc: {
+        title: "IWCSTORE",
+        category: "Web Design & Luxury E-commerce",
+        challenge: "IWCSTORE, a distinguished watch retailer founded in 1961 in Taliparamba, required an upscale, responsive digital showroom that retained its heritage prestige while modernizing customer discovery.",
+        features: [
+          "Curated horizontal product carousels designed with high editorial contrast.",
+          "Faceted specification filtering optimized for horological collectors.",
+          "Mobile-first responsive purchasing architecture with simplified checkout paths."
+        ],
+        tags: ["Figma", "Design System", "E-commerce Architecture", "Responsive Web"]
+      },
+      tempus: {
+        title: "Tempus",
+        category: "Mobile Application (iOS / Android)",
+        challenge: "Consolidating fragmented vehicle maintenance touchpoints into an intuitive single-pane multi-service mobile platform with verified driver telemetry.",
+        features: [
+          "Doorstep service calendar booking with automated mechanic dispatch notifications.",
+          "In-app marketplace for genuine certified auto replacement components.",
+          "Instant on-demand fuel emergency delivery request workflow with real-time location tracking."
+        ],
+        tags: ["Mobile UX", "Information Architecture", "Figma Prototyping", "Design Tokens"]
+      },
+      werun: {
+        title: "Werun",
+        category: "Marketplace Mobile Ecosystem",
+        challenge: "Bridging the transparency gap between outdoor/digital advertising space brokers and agency buyers during internship at Zoople Technologies.",
+        features: [
+          "Two-sided persona-tailored dashboards for media owners and advertisement buyers.",
+          "Interactive map-based ad-space catalog exploration with traffic metric displays.",
+          "Streamlined deal closure flow with automated booking confirmations."
+        ],
+        tags: ["B2B/B2C Marketplace", "User Journeys", "Zoople Internship", "Qualitative Research"]
+      },
+      dashboard: {
+        title: "Marketplace Engine",
+        category: "SaaS Analytics & Data Dashboard",
+        challenge: "Visualizing high-volume multi-vendor GMV, merchant transaction funnels, and retention cohort performance without visual density fatigue.",
+        features: [
+          "Modular widget layout allowing executive customization and cohort filtering.",
+          "High-contrast data charts designed for rapid cognitive pattern parsing.",
+          "Keyboard shortcuts and inline bulk reconciliation actions."
+        ],
+        tags: ["SaaS Design", "Data Visualization", "Framer", "Design Systems"]
+      }
+    };
+
+    // Smooth scroll handler for all internal anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href').substring(1);
+        if (!targetId) return;
+
+        const resolvedId = targetId === 'works' ? 'projects' : targetId;
+        const targetElement = document.getElementById(resolvedId);
+
+        if (targetElement) {
+          e.preventDefault();
+          targetElement.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+          history.pushState(null, '', `#${resolvedId}`);
+        }
+      });
+    });
+
+    // Mobile Drawer Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileDrawer = document.getElementById('mobileDrawer');
+    const menuIcon = document.getElementById('menuIcon');
+
+    if (mobileMenuBtn && mobileDrawer) {
+      mobileMenuBtn.addEventListener('click', () => {
+        const isHidden = mobileDrawer.classList.contains('hidden');
+        if (isHidden) {
+          mobileDrawer.classList.remove('hidden');
+          mobileDrawer.classList.add('flex');
+          menuIcon.textContent = 'close';
+        } else {
+          mobileDrawer.classList.add('hidden');
+          mobileDrawer.classList.remove('flex');
+          menuIcon.textContent = 'menu';
+        }
+      });
+
+      document.querySelectorAll('.mobile-nav-link').forEach(link => {
+        link.addEventListener('click', () => {
+          mobileDrawer.classList.add('hidden');
+          mobileDrawer.classList.remove('flex');
+          menuIcon.textContent = 'menu';
+        });
+      });
+    }
+
+    // Filtering Tabs Logic
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const filter = btn.getAttribute('data-filter');
+
+        // Update active button state in dark aesthetic
+        filterButtons.forEach(b => {
+          b.classList.remove('bg-white', 'text-black', 'shadow-sm', 'font-semibold');
+          b.classList.add('text-[#94A3B8]');
+        });
+        btn.classList.add('bg-white', 'text-black', 'shadow-sm', 'font-semibold');
+        btn.classList.remove('text-[#94A3B8]');
+
+        // Filter projects
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category');
+          if (filter === 'all' || category === filter) {
+            card.style.display = 'flex';
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Toast Notification Utility
+    const toast = document.getElementById('toastNotification');
+    const toastMessage = document.getElementById('toastMessage');
+    let toastTimeout;
+
+    function showToast(msg) {
+      if (!toast || !toastMessage) return;
+      clearTimeout(toastTimeout);
+      toastMessage.textContent = msg;
+      toast.classList.remove('translate-y-24', 'opacity-0');
+      toast.classList.add('translate-y-0', 'opacity-100');
+
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('translate-y-0', 'opacity-100');
+        toast.classList.add('translate-y-24', 'opacity-0');
+      }, 3500);
+    }
+
+    // Copy Email to Clipboard
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
+    const copyIcon = document.getElementById('copyIcon');
+    const copyBtnText = document.getElementById('copyBtnText');
+
+    if (copyEmailBtn) {
+      copyEmailBtn.addEventListener('click', () => {
+        const email = 'nihalayyoob12@gmail.com';
+        navigator.clipboard.writeText(email).then(() => {
+          copyIcon.textContent = 'done';
+          copyBtnText.textContent = 'Copied!';
+          showToast('nihalayyoob12@gmail.com copied to clipboard!');
+
+          setTimeout(() => {
+            copyIcon.textContent = 'content_copy';
+            copyBtnText.textContent = 'Copy Email';
+          }, 2500);
+        }).catch(() => {
+          showToast('Error copying email. Please select manually.');
+        });
+      });
+    }
+
+    // Case Study Modal Logic
+    const modal = document.getElementById('caseStudyModal');
+    const modalBox = document.getElementById('modalBox');
+
+    function openModal(projectKey) {
+      const data = projectDetails[projectKey];
+      if (!data || !modal || !modalBox) return;
+
+      document.getElementById('modalTitle').textContent = data.title;
+      document.getElementById('modalCategory').textContent = data.category;
+      document.getElementById('modalChallenge').textContent = data.challenge;
+
+      const featuresList = document.getElementById('modalFeatures');
+      featuresList.innerHTML = '';
+      data.features.forEach(feat => {
+        const li = document.createElement('li');
+        li.textContent = feat;
+        featuresList.appendChild(li);
+      });
+
+      const tagsContainer = document.getElementById('modalTags');
+      tagsContainer.innerHTML = '';
+      data.tags.forEach(tag => {
+        const span = document.createElement('span');
+        span.className = 'px-3 py-1 bg-white/[0.06] text-zinc-200 border border-white/10 rounded-full font-label-sm text-label-sm font-medium';
+        span.textContent = tag;
+        tagsContainer.appendChild(span);
+      });
+
+      modal.classList.remove('opacity-0', 'pointer-events-none');
+      modal.classList.add('opacity-100', 'pointer-events-auto');
+      modalBox.classList.remove('scale-95');
+      modalBox.classList.add('scale-100');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+      if (!modal || !modalBox) return;
+      modal.classList.add('opacity-0', 'pointer-events-none');
+      modal.classList.remove('opacity-100', 'pointer-events-auto');
+      modalBox.classList.add('scale-95');
+      modalBox.classList.remove('scale-100');
+      document.body.style.overflow = '';
+    }
+
+    if (modal) {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+      });
+    }
+
+    // Resume Modal Logic
+    const resumeModal = document.getElementById('resumeModal');
+    const resumeModalBox = document.getElementById('resumeModalBox');
+    const page1Btn = document.getElementById('page1TabBtn');
+    const page2Btn = document.getElementById('page2TabBtn');
+    const page1Img = document.getElementById('resumeImgPage1');
+    const page2Img = document.getElementById('resumeImgPage2');
+    const resumeDownloadAnchor = document.getElementById('resumeDownloadAnchor');
+    const mobileModalDownloadBtn = document.getElementById('mobileModalDownloadBtn');
+
+    function openResumeModal() {
+      if (!resumeModal || !resumeModalBox) return;
+      resumeModal.classList.remove('opacity-0', 'pointer-events-none');
+      resumeModal.classList.add('opacity-100', 'pointer-events-auto');
+      resumeModalBox.classList.remove('scale-95');
+      resumeModalBox.classList.add('scale-100');
+      document.body.style.overflow = 'hidden';
+      showResumePage(1);
+    }
+
+    function closeResumeModal() {
+      if (!resumeModal || !resumeModalBox) return;
+      resumeModal.classList.add('opacity-0', 'pointer-events-none');
+      resumeModal.classList.remove('opacity-100', 'pointer-events-auto');
+      resumeModalBox.classList.add('scale-95');
+      resumeModalBox.classList.remove('scale-100');
+      document.body.style.overflow = '';
+    }
+
+    function showResumePage(pageNum) {
+      if (pageNum === 1) {
+        page1Img.classList.remove('hidden');
+        page1Img.classList.add('block');
+        page2Img.classList.remove('block');
+        page2Img.classList.add('hidden');
+
+        page1Btn.classList.add('bg-white', 'text-black');
+        page1Btn.classList.remove('text-[#94A3B8]');
+        page2Btn.classList.remove('bg-white', 'text-black');
+        page2Btn.classList.add('text-[#94A3B8]');
+
+        if (resumeDownloadAnchor) {
+          resumeDownloadAnchor.setAttribute('href', 'https://lh3.googleusercontent.com/aida-public/AB6AXuDTNKvkwI8Apdr2LcmYqMn4h5ZJOchyG4Pat4JRQwdaUX4_hjZM27lZyXmqgMfdNUTU9wuMNcJJR-RQHTwObZZS3PvSYty-uNF0ZukS68yF-cT_p8DcJK-hQUmUPhE-2CaGO04eQ4eC9D1SDfzzF_Z86qAQUTaTDkBYHQ3F49InlaRtQM-SC9dQql6uha537MG9UOzPYn6uJSVQUdyTFgg0yoc3LFSYhPwuX4r7tivO-WVRuYflolCUKM0-aX9-F3Nw0w');
+          resumeDownloadAnchor.setAttribute('download', 'Nihal_Ayoob_UIUX_Resume_Page1.png');
+        }
+      } else {
+        page1Img.classList.remove('block');
+        page1Img.classList.add('hidden');
+        page2Img.classList.remove('hidden');
+        page2Img.classList.add('block');
+
+        page2Btn.classList.add('bg-white', 'text-black');
+        page2Btn.classList.remove('text-[#94A3B8]');
+        page1Btn.classList.remove('bg-white', 'text-black');
+        page1Btn.classList.add('text-[#94A3B8]');
+
+        if (resumeDownloadAnchor) {
+          resumeDownloadAnchor.setAttribute('href', 'https://lh3.googleusercontent.com/aida-public/AB6AXuD4klMQF5P1RD_bPCCS2ZO75eZpBHOwHsZGn9NlIXCFgwi2XsKtSwiQJxoJeyKhXA-7HyKWmk82og0OBGuB9UgLvpkPCopTqdcRPyoHekBUfwWv7MI_XS7vtSQnlzBQzet131defdlRGS6jcUWP5vQenzwJ-7j_5Byxrnn1_M3V_Y7VwyV2P2SinzomGiZ3bcV7pbse3O2VfJU42L7_rO_OKNLy-rHocSGDan0CHVouAoIk7xJ79FlYv2Bl0G3GPG-BFA');
+          resumeDownloadAnchor.setAttribute('download', 'Nihal_Ayoob_UIUX_Resume_Page2.png');
+        }
+      }
+    }
+
+    if (page1Btn && page2Btn) {
+      page1Btn.addEventListener('click', () => showResumePage(1));
+      page2Btn.addEventListener('click', () => showResumePage(2));
+    }
+
+    document.querySelectorAll('.open-resume-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        openResumeModal();
+      });
+    });
+
+    const closeResumeBtn = document.getElementById('closeResumeModalBtn');
+    if (closeResumeBtn) {
+      closeResumeBtn.addEventListener('click', closeResumeModal);
+    }
+
+    if (resumeModal) {
+      resumeModal.addEventListener('click', (e) => {
+        if (e.target === resumeModal) closeResumeModal();
+      });
+    }
+
+    if (mobileModalDownloadBtn && resumeDownloadAnchor) {
+      mobileModalDownloadBtn.addEventListener('click', () => {
+        resumeDownloadAnchor.click();
+      });
+    }
+
+    // Keyboard support
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeModal();
+        closeResumeModal();
+      }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
